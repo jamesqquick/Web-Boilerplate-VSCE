@@ -48,6 +48,7 @@ function activate(context) {
         await fs.writeFile(path.join(folderPath, "app.css"), "");
         await fs.writeFile(path.join(folderPath, "app.js"), "");
       } catch (exception) {
+        vscode.window.showWarningMessage("Failed to create files");
         console.log(exception);
       }
     }
