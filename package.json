@@ -12,7 +12,7 @@
     "vscode": "^1.30.0"
   },
   "categories": [
-    "Web Development"
+    "Snippets"
   ],
   "activationEvents": [
     "onCommand:extension.createWebBoilerplate"
