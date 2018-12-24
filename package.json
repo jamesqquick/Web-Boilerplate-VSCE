@@ -4,6 +4,10 @@
   "description": "Creates boilerplate files (html, css, and js) for web app",
   "version": "1.0.0",
   "publisher": "jamesqquick",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesqquick/Web-Boilerplate-VSCE"
+  },
   "engines": {
     "vscode": "^1.30.0"
   },
