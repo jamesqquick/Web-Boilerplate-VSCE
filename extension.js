@@ -43,14 +43,22 @@ function activate(context) {
 </html>
         `;
 
-      try {
-        await fs.writeFile(path.join(folderPath, "index.html"), htmlContent);
-        await fs.writeFile(path.join(folderPath, "app.css"), "");
-        await fs.writeFile(path.join(folderPath, "app.js"), "");
-      } catch (exception) {
-        vscode.window.showWarningMessage("Failed to create files");
-        console.log(exception);
-      }
+      fs.writeFile(path.join(folderPath, "index.html"), htmlContent, err => {
+        if (err) {
+          return console.log(err);
+        }
+        fs.writeFile(path.join(folderPath, "app.js"), "", err => {
+          if (err) {
+            return console.log(err);
+          }
+          fs.writeFile(path.join(folderPath, "app.css"), "", err => {
+            if (err) {
+              return console.log(err);
+            }
+            vscode.window.showWarningMessage("Created boilerplate files!");
+          });
+        });
+      });
     }
   );
 
