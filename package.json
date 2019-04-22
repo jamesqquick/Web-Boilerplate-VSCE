@@ -2,7 +2,7 @@
   "name": "web-boilerplate",
   "displayName": "Web Boilerplate",
   "description": "Creates boilerplate files (html, css, and js) for web app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "jamesqquick",
   "repository": {
     "type": "git",
